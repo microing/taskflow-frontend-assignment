@@ -46,6 +46,7 @@
   color: #111827;
   font-size: 18px;
   font-weight: 700;
+  word-break: break-word;
 }
 
 .task-description {
@@ -53,6 +54,7 @@
   font-size: 14px;
   margin: 12px 0 20px;
   line-height: 1.5;
+  word-break: break-word;
 }
 
 .task-footer {
@@ -103,4 +105,32 @@
 .delete-btn:hover {
   background: #dc2626;
   transform: translateY(-1px);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+  .task-card {
+    padding: 16px;
+  }
+
+  .task-title {
+    font-size: 20px;
+  }
+
+  .task-description {
+    font-size: 15px;
+  }
+
+  .task-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .move-btn,
+  .delete-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
 }

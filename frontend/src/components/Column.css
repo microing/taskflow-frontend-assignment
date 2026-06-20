@@ -7,6 +7,11 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.column:hover {
+  transform: translateY(-2px);
 }
 
 .column-header {
@@ -50,4 +55,23 @@
   text-align: center;
   color: #6b7280;
   font-size: 14px;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+  .column {
+    min-width: 100%;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .column-header h2 {
+    font-size: 22px;
+  }
+
+  .empty-column {
+    padding: 24px;
+  }
 }

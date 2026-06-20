@@ -33,6 +33,7 @@ body {
 .dashboard-header p {
   margin-top: 8px;
   color: #6b7280;
+  line-height: 1.5;
 }
 
 .workspace-select {
@@ -42,6 +43,11 @@ body {
   background: white;
   font-size: 15px;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.workspace-select:hover {
+  border-color: #2563eb;
 }
 
 .workspace-select:focus {
@@ -60,7 +66,7 @@ body {
   background: white;
   padding: 25px;
   border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 .stat-card h3 {
@@ -80,7 +86,7 @@ body {
 
 .boards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
 }
 
@@ -88,14 +94,14 @@ body {
   background: white;
   border-radius: 18px;
   padding: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.06);
-  transition: .25s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.25s;
   cursor: pointer;
 }
 
 .board-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(37,99,235,.15);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
 }
 
 .board-icon {
@@ -130,28 +136,84 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .board-card button:hover {
   background: #1d4ed8;
 }
 
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+  .dashboard-page {
+    padding: 28px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 32px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
 @media (max-width: 768px) {
   .dashboard-page {
-    padding: 20px;
+    padding: 18px;
   }
 
   .dashboard-header {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .dashboard-header p {
+    font-size: 15px;
   }
 
   .workspace-select {
     width: 100%;
   }
 
-  .dashboard-header h1 {
+  .stats-grid {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-card h3 {
     font-size: 28px;
+  }
+
+  .boards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .board-card {
+    padding: 20px;
+  }
+
+  .board-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .board-card h3 {
+    font-size: 20px;
+  }
+
+  .board-card p {
+    font-size: 14px;
   }
 }
