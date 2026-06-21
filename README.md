@@ -95,7 +95,7 @@ project/
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/microing/taskflow-frontend-assignment.git
 ```
 
 ---
